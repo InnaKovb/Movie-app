@@ -1,0 +1,78 @@
+@mixin container {
+    // max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 120px;  
+}
+
+@mixin box-sizing {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+@mixin a-reset {
+    text-decoration: none;
+    display: inline-block;
+}
+
+@mixin font-family_main {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    
+}
+
+@mixin font ($f-weight, $f-size, $line-height, $text-color, $letter-spacing: normal) {
+    font-weight: $f-weight;
+    font-size: $f-size;
+    line-height: $line-height;
+    color: $text-color;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin btn-size ($btn-width, $btn-height) {
+    width: $btn-width;
+    height: $btn-height; 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin vr-centration {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@mixin hr-centration {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flex-s-btwn ($align-items: normal) {
+    display: flex;
+    justify-content: space-between;
+    align-items: $align-items;
+}
+
+@mixin vr-centration-flex {
+    display: flex;
+    align-items: center;    
+}
+
+@mixin hr-centration-flex {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin border {
+    border: 1.5px solid #D9DCE5;
+}
+
+@mixin border-line {
+    border: 1px solid $bg-color-6;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    
+}
