@@ -1,0 +1,155 @@
+@import "../Mixins.scss";
+@import "../Variables.scss";
+
+*,
+*::after,
+*::before {
+    @include box-sizing;
+}
+
+a {
+    @include a-reset;
+}
+
+body {
+    @include font-family_main;
+    
+}
+
+.container {
+    @include container;
+    
+   
+}
+
+.hover-decor {
+    &:hover {
+        color: $t-color-2;
+    }
+}
+
+.footer {
+    background-color: $bg-color-1;
+    
+
+    &__content {
+        @include border-line;
+        padding-top: 100px;
+        padding-bottom: 40px;
+        
+        
+    }
+
+    &__inner {
+        @include flex-s-btwn;
+        
+    
+    }
+
+    &__leftside {
+        width: 309px;
+        padding-right: 20px;
+    }
+    &__logo {
+        @include font (700, 24px, 29px, $t-color-0);
+        padding-bottom: 24px;
+    }
+    &__text {
+        @include font (400, 18px, 26px, $t-color-3);
+        @include font-family_main; 
+        padding-bottom: 40px;
+    }
+    &__rightside {
+        @include flex-s-btwn;
+        
+    }
+    &__menu {
+        @include flex-s-btwn;
+        width: 374px;
+    
+        &-column1 {
+        }
+        &-title {
+            @include font (700, 20px, 25px, $t-color-0);
+            padding-bottom: 24px;
+        }
+        &-items {
+            display: flex;
+            flex-direction: column;
+        }
+        &-item {
+            @include font (400, 18px, 23px, $t-color-3);
+            @include font-family_main; 
+            padding-bottom: 16px;
+        }
+        &-column2 {
+        }
+    }
+    &__subscribe {
+        padding-left: 108px;
+    
+        &-title {
+            @include font (700, 20px, 25px, $t-color-0);
+            padding-bottom: 24px;
+        }
+        &-text {
+            @include font (400, 18px, 23px, $t-color-3);
+            @include font-family_main; 
+            padding-bottom: 40px;
+            width: 240px;
+        }
+    }
+    &__emailForm {
+        @include btn-size(253px, 48px);
+        background-color: $bg-color-0;
+        position: relative;
+        border-radius: 30px;
+    }
+    &__email-input {
+        border: none;
+        outline: none;
+        -webkit-appearance: none;
+        background-color: $bg-color-0;
+        width: 220px;
+        height: 35px;
+        @include font (400, 18px, 21px, $t-color-4);
+        
+    }
+    &__email-input::placeholder  {
+        @include font (400, 18px, 21px, $t-color-1);
+        @include font-family_main; 
+        
+        
+    }
+    &__put-btn {
+        position: absolute;
+        right: 13px;
+        cursor: pointer;
+    }
+    &__basement {
+        padding: 20px 0;
+        text-align: center;
+
+    }
+    &__copy {
+        @include font (400, 18px, 23px, $t-color-3);
+        @include font-family_main; 
+    }
+}
+
+.socials {
+
+    &__text {
+        @include font (700, 20px, 26px, $t-color-0);
+        padding-bottom: 20px;
+    }
+    &__icons {
+        @include vr-centration-flex;
+        :not(:last-child) {
+            padding-right: 15px;
+        }
+    }
+    &__icon {
+       color: $t-color-0;
+    }
+}

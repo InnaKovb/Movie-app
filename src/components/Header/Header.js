@@ -1,8 +1,8 @@
 import logo from '../images/film.png';
 import loupe from '../images/search.png';
 import menu from '../images/menu.png'
-import './Header.scss'
-
+import './Header.scss';
+import { AiFillInstagram } from 'react-icons/ai';
 
 function Header() {
     return (
@@ -14,7 +14,7 @@ function Header() {
                             <div className='header__content-left'>
                                 <a className='company' href='#'>
                                     <img className='company__logo' src={logo} alt='camera roll'/>
-                                    <h1 className='company__name'>Filmsgig</h1>
+                                    <h1 className='company__name '>Filmsgig</h1>
                                 </a>
                                 <a className='header__popular-btn' href='#'>Popular</a>
                             </div>
@@ -41,6 +41,7 @@ function Header() {
                             <h2 className='header__suggestion-title'>Premiere now</h2>
                             <a className='watch-now-btn' href='#'>Watch now</a>
                         </div>
+                        <AiFillInstagram color='red'/>
                     </div>
                 </div>
             </header>

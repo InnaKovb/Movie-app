@@ -1,5 +1,5 @@
-@import "./Header-mixins.scss";
-@import "./Header-variables.scss";
+@import "../Mixins.scss";
+@import "../Variables.scss";
 
 *,
 *::after,
@@ -20,6 +20,12 @@ body {
     @include container;
     
    
+}
+
+.hover-decor {
+    &:hover {
+        color: $t-color-2;
+    }
 }
 
 .header {
