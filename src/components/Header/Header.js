@@ -6,7 +6,6 @@ import { AiFillInstagram } from 'react-icons/ai';
 
 function Header() {
     return (
-        <>
             <header>
                 <div className="header__inner">
                     <div  className='container'>
@@ -27,7 +26,7 @@ function Header() {
                                         <a className='navmenu__item' href='#'>Kids</a>
                                     </div>
                                     <div className='navmenu__search'>
-                                        <input className='navmenu__search-inpt' type="search" placeholder='Search New Movies'>
+                                        <input className='navmenu__search-inpt' type='search' placeholder='Search New Movies'>
                                         </input>
                                         <img className='navmenu__search-loupe' src={loupe}/>
                                         <a className='navmenu__more' href='#'>
@@ -45,7 +44,6 @@ function Header() {
                     </div>
                 </div>
             </header>
-        </>
     )
 }
 

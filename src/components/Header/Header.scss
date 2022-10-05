@@ -33,6 +33,7 @@ body {
         background-image: url(../images/banner.jpeg);
         background-position: 50% 0;
         padding-top: 40px;
+        @include border-line;
         
         
 
@@ -59,7 +60,7 @@ body {
 
     }
     &__suggestion {
-        height: 700px;
+        height: 800px;
         
     }
     &__suggestion-title  {

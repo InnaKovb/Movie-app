@@ -1,0 +1,17 @@
+@import "../Mixins.scss";
+@import "../Variables.scss";
+
+
+.spinner__container {
+    @include hr-centration-flex;
+}
+
+.spinner__loading {
+    animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(1turn);
+    }
+}
