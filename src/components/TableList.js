@@ -1,5 +1,6 @@
 import EmptyMessage from "./EmptyMessage";
 import { useState ,  useEffect} from 'react';
+import Loader from "./Loader/Loader";
 
 function TableList () {
     
@@ -20,6 +21,7 @@ function TableList () {
     return (
         <>          
             <EmptyMessage/>
+            <Loader isLoading="true" loaderColor='orange'/>
             <h2>Popular movies:</h2>
             <ul>
                 {movies.map(movie => (<li key={movie.id}>{movie.original_title}</li>))}

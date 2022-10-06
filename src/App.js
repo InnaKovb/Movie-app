@@ -9,7 +9,6 @@ function App() {
   return (
     <>
       <Header/>
-      {/* <Loader isLoading="true" loaderColor='orange'/> */}
       <TableList/>
       <Footer/>
     </>
