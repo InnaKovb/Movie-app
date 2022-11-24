@@ -25,14 +25,14 @@ function Header() {
                                         <a className='navmenu__item' href='#'>Sports</a>
                                         <a className='navmenu__item' href='#'>Kids</a>
                                     </div>
-                                    <div className='navmenu__search'>
+                                    <form className='navmenu__search'>
                                         <input className='navmenu__search-inpt' type='search' placeholder='Search New Movies'>
                                         </input>
                                         <img className='navmenu__search-loupe' src={loupe}/>
                                         <a className='navmenu__more' href='#'>
                                             <img src={menu}/>
                                         </a>
-                                    </div>
+                                    </form>
                                 </div>
                             </nav>
                         </div>

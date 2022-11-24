@@ -1,0 +1,22 @@
+
+.wrapper {
+    // max-width: 1580px;
+    background-image: url(./images/background2.jpeg);
+    background-position: 50% 0;
+}
+.wrapper-overlay {
+    background-color: #030303e6;
+    padding-top: 20px;
+    padding-bottom:  20px;
+}
+
+.movieCardInner  {
+    justify-content: space-evenly;
+    flex-flow: wrap;
+    display: flex;
+    margin: 0 100px;
+}
+
+.title  {
+    text-align: center;
+}

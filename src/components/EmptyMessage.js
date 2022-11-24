@@ -44,14 +44,15 @@ export default function EmptyMessage () {
         paddingBottom: '40px',
     }
 
-    return (
-        <div className="noData__wrapper" style={wrapperStyle}>
-            <img className='noData__img' src={empty} alt="no data"/>
-            <div className='noData__text'>
-                <div style={title}>No Data Availible!</div>
-                <div style={text}>Look like there was a problem loading from the  database.</div>
-                <a href='#' style={btn}>Reload</a>
+      return (
+            <div className="noData__wrapper" style={wrapperStyle}>
+                <img className='noData__img' src={empty} alt="no data"/>
+                <div className='noData__text'>
+                    <div style={title}>No Data Availible!</div>
+                    <div style={text}>Look like there was a problem loading from the  database.</div>
+                    <a href='#' style={btn}>Reload</a>
+                </div>
             </div>
-        </div>
-    )
+        )  
+    
 }

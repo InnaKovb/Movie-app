@@ -1,3 +1,6 @@
+@import "../Mixins.scss";
+@import "../Variables.scss";
+
 * {
     
     font-family: 'Montserrat', sans-serif;
@@ -9,12 +12,13 @@
   }
 
   .card {
-    width: 360px;
-    height: 545px;
+    width: 320px;
+    height: 480px;
     cursor: pointer;
     transform: translate(10px, 10px);
     display: inline-block;
-    margin-right: 25px;
+    margin: 0 10px 20px;
+    
 
     &:hover {
         .card__front {
@@ -56,20 +60,97 @@
   justify-content: center;
   text-align: center;
 }
+
+
 .card__content {
-    white-space: normal;
-    height: 540px;
+    // white-space: normal;
+    height: 480px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #000000d1;
+    background-color: #000000b3;
     color: white;
+    padding: 20px;
 }
 
 .card__back-img {
-    width: 360px;
-    height: 545px;
+    width: 320px;
+    height: 480px;
     background-position: center;
 }
 
+.card__title {
+    padding-bottom: 5px;
+    &:hover {
+        font-size: 35px;
+        text-shadow: 0 4px 2px $t-color-4;
+        
+    }
+    
+}
+
+.card__rate {
+    padding-bottom: 20px;
+}
+
+.card__overview-decor {
+    padding: 20px 20px;
+    background-color: #a2a2a21a;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.card__overview {
+    
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    white-space: pre-wrap;
+}
+
+.card__rate--title {
+    font-weight: bold;
+}
+
+.card__btns  {
+   @include vr-centration-flex;
+   flex-direction: column;
+}
+
+.card__btn-first {
+    @include btn-size(150px, 40px);
+    background-color: $bg-color-3;
+    border-radius: 30px;
+    @include font (400, 18px, 23px, $t-color-4);
+    @include font-family_main; 
+    font-weight: bold;
+    margin-bottom: 12px;
+
+    &:hover {
+        @include btn-size(155px, 43px);
+        margin-top: -3px;
+        background-color: $bg-color-4;
+        border: 1px solid $bg-color-3;
+        color: $t-color-2;
+        font-size: 19px;
+    }
+}
+
+.card__btn-second {
+    @include btn-size(180px, 35px);
+    background-color: $bg-color-4;
+    border-radius: 30px;
+    @include font (400, 17px, 23px, $t-color-0);
+    @include font-family_main; 
+    font-weight: bold;
+
+    &:hover {
+        @include btn-size(185px, 38px);
+        margin-top: -3px;
+        background-color: $bg-color-4;
+        border: 1px solid $bg-color-0;
+        color: $t-color-0;
+        font-size: 18px;
+    }
+}
