@@ -26,7 +26,10 @@ function Header() {
                                         <a className='navmenu__item' href='#'>Kids</a>
                                     </div>
                                     <form className='navmenu__search'>
-                                        <input className='navmenu__search-inpt' type='search' placeholder='Search New Movies'>
+                                    
+                                        <input className='navmenu__search-inpt' type='text'  placeholder='Find Movies & TV'
+                                        // onChange={(e)=>{setSearch(e.target.value)}} value={search} onKeyPress={searchMovie}
+                                        >
                                         </input>
                                         <img className='navmenu__search-loupe' src={loupe}/>
                                         <a className='navmenu__more' href='#'>

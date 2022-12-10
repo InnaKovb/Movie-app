@@ -1,9 +1,11 @@
 
 
-import { moviesRequested, moviesRecived, moviesRequestFailed } from "./reducers"
+import { moviesRequested, moviesRecived, moviesRequestFailed, currentMovieRequested, currentMovieRecived, currentMovieRequestFailed } from "./reducers"
 
 const API_KEY = 'bda7fa433b3a835662d4cd7b68962b54';
 const apiURL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=`;
+
+
 
 export const requestMoviesList = (page = 1) => async (dispatch) => {
     try {
@@ -17,7 +19,22 @@ export const requestMoviesList = (page = 1) => async (dispatch) => {
     } catch (error) {
         return dispatch(moviesRequestFailed(error.message))
     }
+};
+
+export const requestMovie = (id) =>  async (dispatch) =>{
+    let API_Movie  = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`;
+    try{
+        dispatch(currentMovieRequested())
+        const currentMovieInfo = await fetch(API_Movie).then(res=> res.json());
+        console.log(currentMovieInfo);
+        return dispatch(currentMovieRecived(currentMovieInfo));
+
+        
+    } catch (error) {
+        return dispatch(currentMovieRequestFailed(error.message))
+    }
 }
+
 // moviesList это
 // { 
 //     results: [],

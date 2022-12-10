@@ -1,16 +1,20 @@
-
+import { useNavigate, Route, Routes } from 'react-router-dom';
 import './App.scss';
-import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Loader from './components/Loader/Loader';
 import TableList from './components/TableList';
+import MovieInfo from './components/MovieInfo/MovieInfo';
 
 function App() {
+ 
+
   return (
     <>
-      <Header/>
-      <TableList/>
-      <Footer/>
+    
+    <Routes>
+      <Route path="/" element={<TableList/>}/>
+      <Route path="/movie/detail/:id" element={<MovieInfo/>}/>
+    </Routes>
+    <Footer/>
     </>
   );
 }

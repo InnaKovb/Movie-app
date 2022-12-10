@@ -1,7 +1,8 @@
 import EmptyMessage from "./EmptyMessage";
+import Header from "./Header/Header";
 import { useState ,  useEffect} from 'react';
 import Loader from "./Loader/Loader";
-import MovieCard from "./MovieCard/MovieCard";
+import MovieCard from "./MovieCard/MovieCard"
 import Pagination from "./Pagination/Pagination";
 import { requestMoviesList } from "../store/movies/actions";
  import { useSelector, useDispatch } from 'react-redux';
@@ -35,22 +36,24 @@ function TableList () {
             <Loader isLoading={isLoading} loaderColor='orange'/>,
             <EmptyMessage/>) 
             : (
-                <div className="wrapper">
-                    <div className="wrapper-overlay">
-                        <h2 className='title'>Popular Movies:</h2>
-                        <Loader isLoading={isLoading} loaderColor='orange'/>
-                        <div>
-                            <div className='movieCardInner'>
-                                {moviesData.map(movie => 
-                                <MovieCard key={movie.id} {...movie}/>)
-                                }
-                            </div>  
-                            <Pagination totalPages={500} handlePageChange={(data)=> moviesPageChange(data)}/>    
-                        </div>
-                                
-                    </div> 
-                </div>
-                
+                <>  
+                    <Header/>
+                    <div className="wrapper">
+                        <div className="wrapper-overlay">
+                            <h2 className='title'>Popular Movies:</h2>
+                            <Loader isLoading={isLoading} loaderColor='orange'/>
+                            <div>
+                                <div className='movieCardInner'>
+                                    {moviesData.map(movie => 
+                                    <MovieCard key={movie.id} {...movie}/>)
+                                    }
+                                </div>  
+                                <Pagination totalPages={500} handlePageChange={(data)=> moviesPageChange(data)}/>    
+                            </div>
+                                    
+                        </div> 
+                    </div>
+                </>
             )}      
         </>
 
